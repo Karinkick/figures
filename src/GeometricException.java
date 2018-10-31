@@ -1,6 +1,10 @@
 public class GeometricException extends Exception{
 
-    public GeometricException () {
+    public GeometricException (String message) {
+    super(message);
+    }
+    public GeometricException(){
+
     }
 
         @Override

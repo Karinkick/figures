@@ -17,8 +17,9 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double perimetr (){
+    public double perimeter(){
         return 2*3.14*r;
     }
+
 
 }

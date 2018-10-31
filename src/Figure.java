@@ -1,9 +1,9 @@
-public abstract class Figure {
-    double width;
-    String colour;
+public abstract class Figure{
+    private double width;
+    private String color;
 
-    public void setColour(String colour)  {
-        this.colour = colour;
+    public void setColor(String color)  {
+        this.color = color;
     }
 
     public void setWidth(double width) {
@@ -14,14 +14,14 @@ public abstract class Figure {
         return width;
     }
 
-    public String getColour() {
-        return colour;
+    public String getColor() {
+        return color;
     }
 
     public double square () throws GeometricException {
         return 0;
     }
-    public double perimetr  (){
+    public double perimeter(){
         return 0;
     }
 }

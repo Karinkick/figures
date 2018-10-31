@@ -4,50 +4,75 @@ public class Lab1 {
 
     public static void main(String[] args) throws GeometricException {
 
-        double d;
+        ArrayList points1 = new ArrayList();
+        ArrayList points2 = new ArrayList();
 
         Point p1 = new Point(3.0, 2.0);
-        Point p2 = new Point(1.0, 2.0);
-        Point p3 = new Point(5.0, 5.0);
-        //Point p4 = new Point(6.0, 8.0);
-        Otrezok o1 = new Otrezok(p1,p2);
-        ArrayList Points = new ArrayList();
-        Points.add(p1);
-        Points.add(p2);
-        Points.add(p3);
+        Point p2 = new Point(3.0, 4.0);
+        Point p3 = new Point(3.0, 5.0);
+        Point p4 = new Point(5.0, 5.0);
+        Point p5 = new Point(6.0, 8.0);
+        Point p6 = new Point(7.0, 8.0);
+        Point p7 = new Point(7.0, 9.0);
+        Point p8 = new Point(7.0, 10.0);
+        Point p9 = new Point(2.0, 2.0);
+        Point p10 = new Point(3.0, 1.0);
 
-      //  z1[3] = p4;
-        ZamMnog za1 = new ZamMnog(Points);
-        PolyLine za2 = new PolyLine(Points);
-        System.out.println("Точка 1 = " + p1);
-        System.out.println("Точка 2 = " + p2);
+        Section o1 = new Section(p1,p2);
 
-        //     System.out.println(p1, p2);
-
-        //      System.out.println(String.join("Расстояние от"+p1+"до"+p2));
-
-    //    printMe("Расстояние от " + p1 + " до " + p2 + " равно = " + d);
+        ZamMnog za1 = new ZamMnog(points1);
+        PolyLine polyLine = new PolyLine(points2);
+        try{
+        za1.AddPoint(p1);
+        za1.AddPoint(p2);
+        za1.AddPoint(p3);
+        za1.AddPoint(p4);
+        za1.AddPoint(p5);
+        za1.AddPoint(p6);
+        za1.AddPoint(p7);
+        za1.AddPoint(p8);
+        za1.AddPoint(p9);
+        za1.AddPoint(p10);}
+        catch(GeometricException e){
+            System.out.println(e.getMessage());
+        }
+        polyLine.setColor("red");
+        System.out.println(polyLine.getColor());
+        polyLine.AddPoint(p1);
+        polyLine.AddPoint(p2);
+        polyLine.AddPoint(p3);
+        polyLine.AddPoint(p4);
+        polyLine.AddPoint(p5);
+        polyLine.AddPoint(p6);
+        polyLine.AddPoint(p7);
+        polyLine.AddPoint(p8);
+        polyLine.AddPoint(p9);
+        polyLine.AddPoint(p10);
+        polyLine.DeletePoint(p1);
+        polyLine.DeletePoint(p1);
 
         System.out.println(p1.length(p2));
         System.out.println(p1.equals(p2));
         System.out.println(za1.square());
-        System.out.println(za1.perimetr());
-        System.out.println(za2.perimetr());
+        System.out.println(za1.perimeter());
+        System.out.println(polyLine.perimeter());
+        System.out.println(za1.toString());
+        System.out.println(polyLine.toString());
+
         try {
-            d=o1.square();
-            System.out.println(d);
+            System.out.println(o1.square());
         }
         catch (GeometricException e){
             System.out.println("Нельзя вычислить площадь отрезка " + e) ;
         }
+
         try {
-            d=za2.square();
-            System.out.println(d);
+            System.out.println(polyLine.square());
         }
         catch (GeometricException e){
             System.out.println("Нельзя вычислить площадь незамкнутой линии " + e) ;
         }
 
-    }
 }
 
+}
