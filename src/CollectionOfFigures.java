@@ -1,7 +1,33 @@
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class CollectionOfFigures {
-Map<String,Figure> collect;
+HashMap<String,Figure> collect;
 
-//методы добавления, удаления
+public void RanFig(){
+
+}
+
+public CollectionOfFigures(){
+
+}
+    @Override
+    
+    public String toString(){
+    String s = "";
+        for (Map.Entry entry : collect.entrySet())
+            s = s + "Key: " + entry.getKey() + " Value: "
+                    + entry.getValue() + "; ";
+    return s;
+    }
+
+    public void deleteFigure (String s, Figure f){
+        collect.remove(s, f);
+    }
+
+    public void addFigure (String s, Figure f){
+    collect.put(s, f);
+    }
+
 }

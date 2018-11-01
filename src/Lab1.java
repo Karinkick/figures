@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.Random;
 public class Lab1 {
 
     public static void main(String[] args) throws GeometricException {
@@ -73,6 +73,7 @@ public class Lab1 {
             System.out.println("Нельзя вычислить площадь незамкнутой линии " + e) ;
         }
 
-}
+
+    }
 
 }

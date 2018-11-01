@@ -21,6 +21,4 @@ public class Section extends Figure {
     public double square() throws GeometricException {
         throw new GeometricException("");
     }
-
-
 }
