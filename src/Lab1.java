@@ -3,6 +3,8 @@ import java.util.Random;
 public class Lab1 {
 
     public static void main(String[] args) throws GeometricException {
+        Random ran = new Random();
+
 
         ArrayList points1 = new ArrayList();
         ArrayList points2 = new ArrayList();
