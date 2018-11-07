@@ -19,7 +19,7 @@ public class Lab1 {
         Point p8 = new Point(7.0, 10.0);
         Point p9 = new Point(2.0, 2.0);
         Point p10 = new Point(3.0, 1.0);
-
+CollectionOfFigures Collect = new CollectionOfFigures();
         Section o1 = new Section(p1,p2);
 
         ZamMnog za1 = new ZamMnog(points1);
