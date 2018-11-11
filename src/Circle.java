@@ -2,8 +2,9 @@ public class Circle extends Figure {
     double r;
     Point p;
 
-    public Circle(double c) {
-       c=r;
+    public Circle(Point po, double r1) {
+       p=po;
+       r=r1;
     }
 
     @Override

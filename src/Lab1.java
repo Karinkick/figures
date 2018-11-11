@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Random;
 public class Lab1 {
 
@@ -19,7 +21,9 @@ public class Lab1 {
         Point p8 = new Point(7.0, 10.0);
         Point p9 = new Point(2.0, 2.0);
         Point p10 = new Point(3.0, 1.0);
-CollectionOfFigures Collect = new CollectionOfFigures();
+        Map<String,Figure> collect1 = new LinkedHashMap<>();
+        CollectionOfFigures qw = new CollectionOfFigures((LinkedHashMap) collect1);
+
         Section o1 = new Section(p1,p2);
 
         ZamMnog za1 = new ZamMnog(points1);
@@ -64,6 +68,7 @@ CollectionOfFigures Collect = new CollectionOfFigures();
         try {
             System.out.println(o1.square());
         }
+
         catch (GeometricException e){
             System.out.println("Нельзя вычислить площадь отрезка " + e) ;
         }
@@ -74,7 +79,7 @@ CollectionOfFigures Collect = new CollectionOfFigures();
         catch (GeometricException e){
             System.out.println("Нельзя вычислить площадь незамкнутой линии " + e) ;
         }
-
+        System.out.println(qw.ranFig((LinkedHashMap) collect1));
 
     }
 
