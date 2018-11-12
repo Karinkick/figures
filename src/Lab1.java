@@ -79,7 +79,7 @@ public class Lab1 {
         catch (GeometricException e){
             System.out.println("Нельзя вычислить площадь незамкнутой линии " + e) ;
         }
-        System.out.println(qw.ranFig((LinkedHashMap) collect1));
+        System.out.println(qw.createRandomCollection((LinkedHashMap) collect1));
 
     }
 
