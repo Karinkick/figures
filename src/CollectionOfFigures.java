@@ -2,11 +2,11 @@ import java.util.*;
 
 public class CollectionOfFigures {
     final Random random = new Random();
-    int n=   random.nextInt(10) + 6;
+    int n =   random.nextInt(20);
 
-    Map<String, Figure> map = new LinkedHashMap<String, Figure>(n);
+    Map<String, Figure> map = new HashMap(n);
     int kol = random.nextInt(20) + 1;
-    Map<String, Figure> collect = new LinkedHashMap<>(kol);
+    Map<String, Figure> collect = new HashMap<>(kol);
     int k = random.nextInt(9) + 5;
 
     public Figure cikl(int n) {
@@ -18,33 +18,59 @@ public class CollectionOfFigures {
         ZamMnog elFigure = new ZamMnog(figure);
         return elFigure;
     }
-
+    int v=1;
+    int m=1;
+    int x=1;
+    int d=1;
     public void randomCollectionsOfFigures(int k) {
+        System.out.println("ЯЗАШОЛ");
+        String i;
         String[] NameOfFigure = {"Круг", "Отрезок", "Треугольник", "Четырехугольник", "Многоугольник"};
+
         if (k == 2 | k==3) {
-            map.put(NameOfFigure[k], cikl(k));
+            map.put(NameOfFigure[k]+v, cikl(k));
+            System.out.println(cikl(k));
+            v++;
+            System.out.println(map);
         }
+
         if (k == 0) {
             Circle circle = new Circle(new Point(random.nextInt(5) + 1, random.nextInt(5) + 1), random.nextInt(5) + 1);
-            map.put(NameOfFigure[0], circle);
+            map.put(NameOfFigure[0]+m, circle);
+            System.out.println(circle);
+            m++;
+            System.out.println(map);
         }
+
         if (k == 1) {
 
             Point po1 = new Point(random.nextInt(100) + 2, random.nextInt(100) + 2);
             Point po2 = new Point(random.nextInt(100) + 2, random.nextInt(100) + 2);
             Section section = new Section(po1, po2);
-            map.put(NameOfFigure[k], section);
+            map.put(NameOfFigure[k] + x, section);
+            System.out.println(section);
+            x++;
+            System.out.println(x);
+            System.out.println(map);
         }
+
         if (k>=4){
-            map.put(NameOfFigure[4], cikl(k));
+            map.put(NameOfFigure[4]+d, cikl(k));
+            System.out.println(cikl(k));
+            d++;
+            System.out.println(map);
         }
 
     }
 
-    public Map<String, Figure> createRandomCollection (LinkedHashMap collect1){
+    public Map<String, Figure> createRandomCollection(LinkedHashMap collect1){
 
        for (int i=0;i<n;i++){
-           int r=    random.nextInt(6);
+
+
+           System.out.println(n);
+           int r=    random.nextInt(5);
+           System.out.println(r);
            randomCollectionsOfFigures(r);
 
        }
