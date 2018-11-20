@@ -1,8 +1,10 @@
+package my.figures;
+
 public class Circle extends Figure {
     double r;
-    Point p;
+    point p;
 
-    public Circle(Point po, double r1) {
+    public Circle(point po, double r1) {
        p=po;
        r=r1;
     }

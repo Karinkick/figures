@@ -1,3 +1,5 @@
+package my.figures;
+
 public abstract class Figure{
     private double width;
     private String color;

@@ -1,3 +1,5 @@
+package my.figures;
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -11,51 +13,51 @@ public class Lab1 {
         ArrayList points1 = new ArrayList();
         ArrayList points2 = new ArrayList();
 
-        Point p1 = new Point(3.0, 2.0);
-        Point p2 = new Point(3.0, 4.0);
-        Point p3 = new Point(3.0, 5.0);
-        Point p4 = new Point(5.0, 5.0);
-        Point p5 = new Point(6.0, 8.0);
-        Point p6 = new Point(7.0, 8.0);
-        Point p7 = new Point(7.0, 9.0);
-        Point p8 = new Point(7.0, 10.0);
-        Point p9 = new Point(2.0, 2.0);
-        Point p10 = new Point(3.0, 1.0);
+        point p1 = new point(3.0, 2.0);
+        point p2 = new point(3.0, 4.0);
+        point p3 = new point(3.0, 5.0);
+        point p4 = new point(5.0, 5.0);
+        point p5 = new point(6.0, 8.0);
+        point p6 = new point(7.0, 8.0);
+        point p7 = new point(7.0, 9.0);
+        point p8 = new point(7.0, 10.0);
+        point p9 = new point(2.0, 2.0);
+        point p10 = new point(3.0, 1.0);
         Map<String,Figure> collect1 = new LinkedHashMap<>();
-        CollectionOfFigures qw = new CollectionOfFigures((LinkedHashMap) collect1);
+        collectionOfFigures qw = new collectionOfFigures((LinkedHashMap) collect1);
 
         Section o1 = new Section(p1,p2);
 
         ZamMnog za1 = new ZamMnog(points1);
         PolyLine polyLine = new PolyLine(points2);
         try{
-        za1.AddPoint(p1);
-        za1.AddPoint(p2);
-        za1.AddPoint(p3);
-        za1.AddPoint(p4);
-        za1.AddPoint(p5);
-        za1.AddPoint(p6);
-        za1.AddPoint(p7);
-        za1.AddPoint(p8);
-        za1.AddPoint(p9);
-        za1.AddPoint(p10);}
+        za1.addPoint(p1);
+        za1.addPoint(p2);
+        za1.addPoint(p3);
+        za1.addPoint(p4);
+        za1.addPoint(p5);
+        za1.addPoint(p6);
+        za1.addPoint(p7);
+        za1.addPoint(p8);
+        za1.addPoint(p9);
+        za1.addPoint(p10);}
         catch(GeometricException e){
             System.out.println(e.getMessage());
         }
         polyLine.setColor("red");
         System.out.println(polyLine.getColor());
-        polyLine.AddPoint(p1);
-        polyLine.AddPoint(p2);
-        polyLine.AddPoint(p3);
-        polyLine.AddPoint(p4);
-        polyLine.AddPoint(p5);
-        polyLine.AddPoint(p6);
-        polyLine.AddPoint(p7);
-        polyLine.AddPoint(p8);
-        polyLine.AddPoint(p9);
-        polyLine.AddPoint(p10);
-        polyLine.DeletePoint(p1);
-        polyLine.DeletePoint(p1);
+        polyLine.addPoint(p1);
+        polyLine.addPoint(p2);
+        polyLine.addPoint(p3);
+        polyLine.addPoint(p4);
+        polyLine.addPoint(p5);
+        polyLine.addPoint(p6);
+        polyLine.addPoint(p7);
+        polyLine.addPoint(p8);
+        polyLine.addPoint(p9);
+        polyLine.addPoint(p10);
+        polyLine.deletePoint(p1);
+        polyLine.deletePoint(p1);
 
         System.out.println(p1.length(p2));
         System.out.println(p1.equals(p2));

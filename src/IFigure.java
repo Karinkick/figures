@@ -1,6 +1,8 @@
-public interface IFigure {
-    public void AddPoint(Point p) throws GeometricException;
+package my.figures;
 
-    public void DeletePoint(Point p);
+public interface IFigure {
+    public void addPoint(point p) throws GeometricException;
+
+    public void deletePoint(point p);
 
 }

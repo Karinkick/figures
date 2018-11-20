@@ -1,3 +1,5 @@
+package my.figures;
+
 public class GeometricException extends Exception{
 
     public GeometricException (String message) {
@@ -9,7 +11,7 @@ public class GeometricException extends Exception{
 
         @Override
     public String toString() {
-        return "GeometricException!" ;
+        return "my.figures.GeometricException!" ;
     }
 }
 

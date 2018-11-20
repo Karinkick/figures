@@ -1,17 +1,18 @@
-import java.util.ArrayList;
+package my.figures;
 
-public class PolyLine extends Figure implements IFigure {
+import java.util.List;
 
-    ArrayList<Point> points1;
-    public PolyLine(ArrayList p){
-        points1 =p;
+public class PolyLine extends AbstractMnog implements IFigure {
+
+    public PolyLine(List<point> p){
+        super(p);
     }
 
     @Override
     public String toString(){
         String allPoints = "";
-        for(int i = 0; i< points1.size(); i++){
-            allPoints = allPoints + points1.get(i).toString() +  " ";
+        for(int i = 0; i< points.size(); i++){
+            allPoints = allPoints + points.get(i).toString() +  " ";
         }
         return allPoints;
     }
@@ -19,25 +20,15 @@ public class PolyLine extends Figure implements IFigure {
     @Override
     public double perimeter(){
         double s=0;
-        for (int i = 0; i< points1.size()-1; i++){
-            Point p1,p2;
-            p1= points1.get(i);
-            p2= points1.get(i+1);
+        for (int i = 0; i< points.size()-1; i++){
+            point p1,p2;
+            p1= points.get(i);
+            p2= points.get(i+1);
             s+=p1.length(p2);
                  }
         return s;
     }
 
-    @Override
-    public void AddPoint(Point p) throws GeometricException{
-                ZamMnog.duble(p, points1);
-
-    }
-
-    @Override
-    public void DeletePoint(Point p) {
-        points1.remove(p);
-    }
 
 
     @Override
@@ -45,4 +36,8 @@ public class PolyLine extends Figure implements IFigure {
         throw new GeometricException();
     }
 
+    @Override
+    public void deletePoint(point p) {
+        
+    }
 }
